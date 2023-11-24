@@ -51,25 +51,11 @@ body {
   left: 50%;
   top: 50%;
   z-index: 1;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
   will-change: transform;
-}
-.aggregation__banner-img:nth-child(1) {
-  -webkit-transform: translate(-270%, -130%);
-          transform: translate(-270%, -130%);
-}
-.aggregation__banner-img:nth-child(2) {
-  -webkit-transform: translate(-220%, 0%);
-          transform: translate(-220%, 0%);
-}
-.aggregation__banner-img:nth-child(3) {
-  -webkit-transform: translate(160%, -120%);
-          transform: translate(160%, -120%);
-}
-.aggregation__banner-img:nth-child(4) {
-  -webkit-transform: translate(110%, 10%);
-          transform: translate(110%, 10%);
 }
 .aggregation__banner-title {
   font-size: 48px;
