@@ -52,10 +52,6 @@ body {
   left: 50%;
   top: 50%;
   z-index: 1;
-  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
-  transition: opacity 0.3s, -webkit-transform 0.3s;
-  transition: transform 0.3s, opacity 0.3s;
-  transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
   will-change: transform;
 }
 .aggregation__banner-title {

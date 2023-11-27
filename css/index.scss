@@ -49,24 +49,8 @@ body {
       top: 50%;
       z-index: 1;
       // transform: translate(-50%, -50%);
-      transition: transform 0.3s, opacity 0.3s;
+      // transition: transform 0.3s, opacity 0.3s;
       will-change: transform;
-
-      // &:nth-child(1) {
-      //   transform: translate(-270%, -130%);
-      // }
-
-      // &:nth-child(2) {
-      //   transform: translate(-220%, 0%);
-      // }
-
-      // &:nth-child(3) {
-      //   transform: translate(160%, -120%);
-      // }
-
-      // &:nth-child(4) {
-      //   transform: translate(110%, 10%);
-      // }
     }
 
     &-title {
