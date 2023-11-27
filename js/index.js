@@ -18,20 +18,11 @@ const bannerImgsEffect = () => {
 
       item.style = `transform: translate(calc(${dynamicX}vw - 50%),calc(${dynamicY}vw - 50%));`;
       item.style.opacity = dynamicOpacity;
-
-      // item.setAttribute(
-      //   "style",
-      //   `transform: translate(calc(${dynamicX}vw - 50%),calc(${dynamicY}vw - 50%));`
-      // );
-
-      // console.log(dynamicX, dynamicY);
     });
   } else {
     bannerImgs.forEach((item) => {
       item.style = "transform: translate(-50%,-50%);";
       item.style.opacity = "0";
-
-      // item.setAttribute("style", "transform: translate(-50%,-50%);");
     });
   }
 };
