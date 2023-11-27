@@ -14,17 +14,24 @@ const bannerImgsEffect = () => {
       let y = bannerImgsPositionInfo[idx].y;
       let dynamicX = x - x * scrollRatio; // ex. 20vw*1%=2vw -> 20vw-2vw=18vw
       let dynamicY = y - y * scrollRatio; // ex. -20vw*1%=-2vw -> -20vw-(-2vw)=-18vw
+      let dynamicOpacity = 1 - scrollRatio;
 
-      item.setAttribute(
-        "style",
-        `transform: translate(calc(${dynamicX}vw - 50%),calc(${dynamicY}vw - 50%));`
-      );
+      item.style = `transform: translate(calc(${dynamicX}vw - 50%),calc(${dynamicY}vw - 50%));`;
+      item.style.opacity = dynamicOpacity;
+
+      // item.setAttribute(
+      //   "style",
+      //   `transform: translate(calc(${dynamicX}vw - 50%),calc(${dynamicY}vw - 50%));`
+      // );
 
       // console.log(dynamicX, dynamicY);
     });
   } else {
     bannerImgs.forEach((item) => {
-      item.setAttribute("style", `transform: translate(-50%,-50%);`);
+      item.style = "transform: translate(-50%,-50%);";
+      item.style.opacity = "0";
+
+      // item.setAttribute("style", "transform: translate(-50%,-50%);");
     });
   }
 };

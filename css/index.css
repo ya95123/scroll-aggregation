@@ -52,7 +52,11 @@ body {
   left: 50%;
   top: 50%;
   z-index: 1;
-  will-change: transform;
+  -webkit-transition: opacity 0.1s, -webkit-transform 0.1s;
+  transition: opacity 0.1s, -webkit-transform 0.1s;
+  transition: transform 0.1s, opacity 0.1s;
+  transition: transform 0.1s, opacity 0.1s, -webkit-transform 0.1s;
+  will-change: transform, opacity;
 }
 .aggregation__banner-title {
   font-size: 48px;
