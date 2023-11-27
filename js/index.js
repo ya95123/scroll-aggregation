@@ -26,33 +26,13 @@ bannerImgs.forEach((item) => {
   test(item);
 });
 
-// banner scroll option
-const bannerScrollOption = {
-  root: null,
-  rootMargin: "0px",
-  threshold: 0,
-};
+window.addEventListener("scroll", (e) => {
+  const bannerEffectHeight = Math.floor(banner.scrollHeight * 0.75);
+  const scrollY = window.scrollY;
+  // console.log(scrollY);
+  // console.log(bannerEffectHeight);
 
-// banner scroll callback
-const bannerScrollCallback = (entries, observer) => {
-  console.log(entries);
-  entries.forEach((entry, idx) => {
-    if (!entry.isIntersecting) return;
-    console.log(entry);
-
-    // 載入圖片，調用 loadImages function
-
-    // 載入後就停止觀察。提升效能
-    observer.unobserve(entry.target);
-  });
-};
-
-// create Intersecting Observer for banner
-const bannerScrollObserver = new IntersectionObserver(
-  bannerScrollCallback,
-  bannerScrollOption
-);
-
-bannerScrollObserver.observe(banner);
-
-// TODO 查 intersection get 現在滑在第幾 %
+  if (scrollY <= bannerEffectHeight) {
+    console.log("I'm in.");
+  }
+});
